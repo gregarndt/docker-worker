@@ -19,5 +19,16 @@ suite('pull image', function() {
     assert.equal(result.run.state, 'completed', 'task should be successfull');
     assert.equal(result.run.reasonResolved, 'completed', 'task should be successfull');
   }));
+  test('Task marked as failed if image cannot be pulled', co(function* () {
+    var result = yield testworker({
+      payload: {
+        image: 'ubuntu:99.99',
+        command: cmd('ls'),
+        maxRunTime: 5 * 60
+      }
+    });
+    assert.equal(result.run.state, 'failed', 'task should be successfull');
+    assert.equal(result.run.reasonResolved, 'failed', 'task should be successfull');
+  }));
 });
 
