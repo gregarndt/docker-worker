@@ -3,7 +3,7 @@
     {
       "task": {
         "metadata": {
-          "name": "Docker-worker tests",
+          "name": "Docker-worker tests - New stuff",
           "description": "Runs entire docker-worker test suite",
           "source": "http://todo.com/soon",
           "owner": "mozilla@mozilla.org"
