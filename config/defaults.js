@@ -1,9 +1,4 @@
 module.exports = {
-  // Setting this to true will allow certain CI features to be enabled, including
-  // injecting credentials into task container for tests.  Credentails for this
-  // worker should be limited to the workertypes specific to this worker and
-  // the few docker-worker images its allowed to use.
-  ci: false,
   dockerConfig: {
     // Privileged mode will allow tasks to run with elevated privileges similar
     // to process running on the host.  The task containers will have access to
