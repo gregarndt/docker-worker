@@ -9,7 +9,7 @@ var waitForEvent = require('../lib/wait_for_event');
 
 var Promise = require('promise');
 
-const IMAGE = 'taskcluster/docker-worker-test:latest';
+const IMAGE = 'taskcluster/docker-worker-test:0.12.4';
 
 function waitForMessage(listener, event, data) {
   return new Promise(function(accept) {

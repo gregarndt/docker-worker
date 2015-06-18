@@ -14,8 +14,8 @@ module.exports = {
 
   influx: {
     connectionString: process.env.INFLUX_CONNECTION_STRING || 'http://localhost',
-    maxDelay: 1,
-    maxPendingPoints: 1,
+    maxDelay: 10000000,
+    maxPendingPoints: 100000000,
     allowHTTP: true
   },
 
