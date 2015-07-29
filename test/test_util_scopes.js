@@ -16,4 +16,3 @@ suite('test lib/util/scopes', function() {
     });
   });
 });
-
