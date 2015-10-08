@@ -36,7 +36,6 @@
     "dockerode-options": "^0.1.0",
     "dockerode-process": "^0.6.1",
     "dockerode-promise": "0.1.0",
-    "fs-ext": "^0.4.5",
     "http-proxy": "^1.11.1",
     "lodash": "^3.10.0",
     "middleware-object-hooks": "0.0.3",
@@ -63,6 +62,9 @@
     "time-chunked-stream": "^1.0.0",
     "uuid": "^1.4.1",
     "xml2js": "^0.4.5"
+  },
+  "optionalDependencies": {
+    "fs-ext": "^0.4.5"
   },
   "devDependencies": {
     "aws-sdk": "^2.1.5",

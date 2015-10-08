@@ -184,10 +184,14 @@ async function main () {
     });
   }
 
+  // XXX windows issue
+  // problem with collecting HD stats
+  /*
   setInterval(
     reportHostMetrics.bind(this, config),
     config.metricsCollection.hostMetricsInterval
   );
+  */
 
   config.log = createLogger({
     source: 'top', // top level logger details...
