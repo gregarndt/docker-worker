@@ -1,0 +1,12 @@
+#!/bin/bash -vex
+
+set -e -v -x
+
+script
+  # Wait until docker socket is available
+  while [ ! -e "/var/run/docker.sock" ];
+  do echo "Waiting for /var/run/docker.sock"; sleep 3; done;
+
+  DOCKER_WORKER='DEBUG={{debug.level}} node /home/ubuntu/docker_worker/build/bin/worker.js'
+  $DOCKER_WORKER --host aws production 2>&1 | logger --tag docker-worker
+end script

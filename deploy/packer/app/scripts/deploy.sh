@@ -8,9 +8,6 @@ if [ $md5 != "c75ce425e553e416bde4e412439e3d09" ]; then
     exit -1
 fi
 
-# pip deps
-sudo pip install python-statsd influxdb
-
 # template source which must override system files.
 template_source=$1
 

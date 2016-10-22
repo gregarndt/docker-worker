@@ -132,11 +132,10 @@ module.exports = class DockerImage {
         let randomizationFactor = config.randomizationFactor;
         delay = delay * (Math.random() * 2 * randomizationFactor + 1 - randomizationFactor);
         debug(
-          'pull image failed Next Attempt in: %s ms. Image: %s. %s, as JSON: %j',
+          'pull image failed Next Attempt in: %s ms. Image: %s. %s',
           delay.toFixed(2),
           image,
-          err,
-          err.stack
+          err.message
         );
 
         await sleep(delay);
